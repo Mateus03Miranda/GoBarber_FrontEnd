@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import signInBackgroundImg from '../../assets/sign-in-background.png';
+import signUpBackgroundImg from '../../assets/sign-up-background.png';
 
 export const Container = styled.div`
     height: 100vh;
@@ -35,28 +35,51 @@ export const Content = styled.div`
     }
 
     > a {
-        color: #ff9000;
+        color: #f4ede8;
         text-decoration: none;
+        transition: all 0.3s;
         display: flex;
         align-items: center;
         transition: all 0.3s;
 
         svg {
             margin-right: 16px;
-            transition: margin-right 0.3s;
+            transition: all 0.3s;
         }
         &:hover {
-            color: #b56600;
-            margin-left: 15px;
+            color: #b3adaa;
         }
         &:hover > svg {
-            margin-right: 13px;
+            margin-right: 22px;
         }
     }
 `;
 
 export const Background = styled.div`
     flex: 1;
-    background: url(${signInBackgroundImg}) no-repeat center;
+    background: url(${signUpBackgroundImg}) no-repeat center;
     background-size: cover;
+`;
+
+export const Options = styled.div`
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+
+    span {
+        font-weight: 500;
+        position: relative;
+        cursor: pointer;
+        &:first-child::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: 30px;
+            border-radius: 4px;
+            background-color: #ff9000;
+        }
+    }
 `;
