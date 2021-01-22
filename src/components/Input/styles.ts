@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+    isFilled: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
     background: #232129;
     border-radius: 10px;
     border: 2px solid #232129;
@@ -10,6 +14,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     transition: all 0.2s;
+    ${props =>
+        props.isFilled &&
+        css`
+            color: #ff9000;
+        `}
     input {
         background: transparent;
         flex: 1;
@@ -23,6 +32,7 @@ export const Container = styled.div`
         padding: 18px;
         color: #ff9000;
         border-radius: 6px;
+        border-color: #ff9000;
     }
     & + div {
         margin-top: 8px;

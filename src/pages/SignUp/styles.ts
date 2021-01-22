@@ -37,7 +37,6 @@ export const Content = styled.div`
     > a {
         color: #f4ede8;
         text-decoration: none;
-        transition: all 0.3s;
         display: flex;
         align-items: center;
         transition: all 0.3s;
@@ -48,9 +47,11 @@ export const Content = styled.div`
         }
         &:hover {
             color: #b3adaa;
+            margin-right: 10px;
+            margin-left: 4px;
         }
         &:hover > svg {
-            margin-right: 22px;
+            margin-right: 12px;
         }
     }
 `;
