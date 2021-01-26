@@ -21,7 +21,6 @@ const SignUp: React.FC = () => {
     const handleSubmit = useCallback(async (data: FormData) => {
         try {
             FormRef.current?.setErrors({});
-
             const schema = yup.object().shape({
                 name: yup.string().required('O nome é obrigatório!'),
                 email: yup
